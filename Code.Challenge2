@@ -1,0 +1,35 @@
+j = eval(input("Enter your deposit-->"))
+print("Here is a breakdown of your deposit:")
+
+a = j // 1000
+j = j - a * 1000
+b = j // 500
+j = j - b * 500
+c = j // 200
+j = j - c * 200
+d = j // 100
+j = j - d * 100
+e = j // 50
+j = j - e * 50
+f = j // 20
+j = j - f * 20
+g = j // 10
+j = j - g * 10
+h = j // 5
+j = j - h * 5
+i = j // 1
+j = j - i * 1
+
+
+
+
+
+print(a, "-1000")
+print(b, "-500")
+print(c, "-200")
+print(d, "-100")
+print(e, "-50")
+print(f, "-20")
+print(g, "-10")
+print(h, "-5")
+print(i, "-1")

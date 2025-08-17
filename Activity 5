@@ -1,0 +1,3 @@
+Roces = eval(input("Write Anthing-->"))
+
+print("The data type is-->", type(Roces))

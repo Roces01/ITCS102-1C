@@ -1,0 +1,2 @@
+MyName = input("Type Your Name: ")
+print("\t\t\t\t\t\t*", "\n\t\t\t\t\t*", "\t\t*", "\n\t\t\t\t*", "\t\t\t\t*", "\n\t\t\t*", "\t\tHello\f",MyName , "\t\t\t*", "\n\t\t\t\t*", "\t\t\t\t*", "\n\t\t\t\t\t*", "\t\t*", "\n\t\t\t\t\t\t*")

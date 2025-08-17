@@ -1,0 +1,11 @@
+FN = eval(input("Enter the first number-->"))
+SC = eval(input("Enter the second number-->"))
+
+a = FN + SC
+b = FN - SC
+c = FN * SC
+d = FN / SC
+print("The Answer of the equation addition is", a)
+print("The Answer of the equation subtraction is", b)
+print("The Answer of the equation multiplication is", c)
+print("The Answer of the equation division is", d)

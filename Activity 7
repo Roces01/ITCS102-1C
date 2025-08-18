@@ -1,0 +1,18 @@
+R = 100
+
+print("The Value of R is", R)
+
+R += 5
+
+print("The Value of R is", R)
+
+
+R += 5
+R *= 5
+R *= 5
+R -= 5
+R *= 5
+R /= 5
+
+
+print("The Value of R is", R)

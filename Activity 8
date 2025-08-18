@@ -1,0 +1,11 @@
+a = 10
+b = 15
+c = 10
+d = 35
+e = 25
+
+
+print( a > b)
+print( a >= c)
+print( e == d)
+print( b != c)

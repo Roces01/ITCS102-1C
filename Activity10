@@ -1,0 +1,11 @@
+K = 'Kurt'
+G = 'Gay'
+
+U = input("Username-->")
+P = input("Password-->")
+
+if U == K and P == G :
+	print("Access Granted")
+
+else : 
+	print("Access Denied")

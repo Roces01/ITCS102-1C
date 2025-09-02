@@ -1,0 +1,23 @@
+U = input("Enter your name-->")
+P = eval(input("Fee-->"))
+S = input("Are you a student?(Yes or No)")
+print("Here is breakdown of your fee")
+print("Minumum Fare--> 13.00")
+
+
+if S.lower() == "yes":
+	DP = 13 * .20
+	TP = 13 - DP
+	C = P - TP
+	print("Your Student")
+	print("Payment-->", P)
+	print("Discount-->", DP)
+	print("Discounted Price-->", TP)
+	print("Your Change is-->", C)
+	print("Thank You And Take Care!!", U)
+else:
+	CH = P - 13
+	print("Your Regular")
+	print("Pay-->", P)
+	print("Your Change is-->", CH)
+	print("Thank You And Take Care!!", U)

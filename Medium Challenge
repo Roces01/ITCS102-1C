@@ -1,0 +1,18 @@
+P = eval(input("Input Your Payment-->"))
+IP = eval(input("Item Price-->"))
+QTY = eval(input("Quantity-->"))
+
+C = IP * QTY
+
+if C >= 100:
+	D = C * .10
+	DP = C - D
+	CH = P - DP
+	print("Cost-->", C)
+	print("Discount-->", D)
+	print("Discounted Price-->", DP)
+	print("Change-->", CH)
+else:
+	CH = P - C
+	print("Cost-->", C)
+	print("Change-->", CH)

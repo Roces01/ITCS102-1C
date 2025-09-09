@@ -1,0 +1,19 @@
+Temp = eval(input("Put Your Temperature-->"))
+
+if Temp <= 0:
+	print("Your Freezing")
+elif Temp <= 20:
+	print28("Extremely Cold")
+elif Temp <= 30:
+	print("Moderately Cold")
+
+elif Temp <= 37: 
+	print("LukeWarm")
+elif Temp <= 45: 
+	print("Your Hot")
+
+elif Temp <= 50: 
+	print("Your Boiling Bro")
+
+else:
+	print("Burned Your Over 50 Degree")

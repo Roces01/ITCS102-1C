@@ -1,0 +1,30 @@
+Name = ""
+person1 = input("Input")
+Name += person1
+person2 = input("Input")
+Name += person2
+
+person3 = input("Input")
+Name += person3
+
+person4 = input("Input")
+Name += person4
+
+person5 = input("Input")
+Name += person5
+
+person6 = input("Input")
+Name += person6
+
+person7 = input("Input")
+Name += person7
+
+person8 = input("Input")
+Name += person8
+
+person9 = input("Input")
+Name += person9
+
+person10 = input("Input")
+Name += person10
+print(Name)

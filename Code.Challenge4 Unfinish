@@ -1,0 +1,190 @@
+print("Welcome")
+print("Choose Genre")
+print("1. Anime")
+print("2. Romance")
+print("Action")
+
+Genre = eval(input("Choose Genre"))
+if Genre == "1":
+   print("You Choosed Anime")
+
+      print("Choose Duration")
+      print("1. Short")
+      print("2. Medium")
+      print("3. Long")
+      Duration = eval(input("Choose Duration Below.")) 
+
+        if Duration == "1":
+           print("You Choosed Short Duration")
+         
+              print("Choose Year.")
+              print("1. 1990s")
+              print("2. 2000s")
+              Decades = eval(input("Choose Year Below.")
+
+              if Decades == "1";
+                  print("There Nothing Here.")
+              elif Decades == "2":
+                  print("There Nothing Here.")
+              else:
+                  print("Just Choosed 1 and 2.)
+              
+
+
+          elif Duration == "2":
+             print("You Choosed Medium Duration")
+      
+              print("Choose Year.")
+              print("1. 1990s")
+              print("2. 2000s")
+              Decades = eval(input("Choose Year Below.")
+
+              if Decades == "1";
+                 print("There Nothing Here.")
+              elif Decades == "2":
+                 print("There Nothing Here.")
+              else:
+                  print("Just Choosed 1 and 2.)
+              
+
+
+         elif Duration == "3":
+             print("You Choosed Long Duration")
+                
+              print("Choose Year.")
+              print("1. 1990s")
+              print("2. 2000s")
+              Decades = eval(input("Choose Year Below.")
+
+              if Decades == "1";
+                 print("There Nothing Here.")
+              elif Decades == "2":
+                 print("There Nothing Here.")
+               else:
+                  print("Just Choosed 1 and 2.)
+         
+          else:
+                print("Just Choose 1, 2, and 3.")    
+
+  
+      
+elif Genre == "2":
+    print"You Choosed Romance")
+     
+print("Choose Duration")
+      print("1. Short")
+      print("2. Medium")
+      print("3. Long")
+      Duration = eval(input("Choose Duration Below.")) 
+       if Duration == "1":
+          print("You Choosed Short Duration")
+         
+              print("Choose Year.")
+              print("1. 1990s")
+              print("2. 2000s")
+              Decades = eval(input("Choose Year Below.")
+              if Decades == "1";
+                 print("There Nothing Here.")
+              elif Decades == "2":
+                 print("There Nothing Here.")
+              else:
+                  print("Just Choosed 1 and 2.)
+              
+
+
+       elif Duration == "2":
+          print("You Choosed Medium Duration")
+      
+              print("Choose Year.")
+              print("1. 1990s")
+              print("2. 2000s")
+              Decades = eval(input("Choose Year Below.")
+              if Decades == "1";
+                 print("There Nothing Here.")
+              elif Decades == "2":
+                 print("There Nothing Here.")
+               else:
+                  print("Just Choosed 1 and 2.)
+              
+
+
+       elif Duration == "3":
+           print("You Choosed Long Duration")
+                
+              print("Choose Year.")
+              print("1. 1990s")
+              print("2. 2000s")
+              Decades = eval(input("Choose Year Below.")
+              if Decades == "1";
+                 print("There Nothing Here.")
+              elif Decades == "2":
+                 print("There Nothing Here.")
+               else:
+                  print("Just Choosed 1 and 2.)
+         
+          else:
+                print("Just Choose 1, 2, and 3.")  
+
+elif Genre == "3":
+    print("You Choosed Action")
+    
+    print("Choose Duration")
+      print("1. Short")
+      print("2. Medium")
+      print("3. Long")
+      Duration = eval(input("Choose Duration Below.")) 
+       if Duration == "1":
+          print("You Choosed Short Duration")
+         
+              print("Choose Year.")
+              print("1. 1990s")
+              print("2. 2000s")
+              Decades = eval(input("Choose Year Below.")
+              if Decades == "1";
+                 print("There Nothing Here.")
+              elif Decades == "2":
+                 print("There Nothing Here.")
+               else:
+                  print("Just Choosed 1 and 2.)
+              
+
+
+       elif Duration == "2":
+          print("You Choosed Medium Duration")
+      
+              print("Choose Year.")
+              print("1. 1990s")
+              print("2. 2000s")
+              Decades = eval(input("Choose Year Below.")
+              if Decades == "1";
+                 print("There Nothing Here.")
+              elif Decades == "2":
+                 print("There Nothing Here.")
+               else:
+                  print("Just Choosed 1 and 2.)
+              
+
+
+       elif Duration == "3":
+           print("You Choosed Long Duration")
+                
+              print("Choose Year.")
+              print("1. 1990s")
+              print("2. 2000s")
+              Decades = eval(input("Choose Year Below.")
+              if Decades == "1";
+                 print("There Nothing Here.")
+              elif Decades == "2":
+                 print("There Nothing Here.")
+               else:
+                  print("Just Choosed 1 and 2.)
+         
+          else:
+                print("Just Choose 1, 2, and 3.")  
+
+
+
+else:
+    print("Just Choose Number 1, 2, and 3.")
+
+

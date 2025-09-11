@@ -1,0 +1,179 @@
+print("Welcome!!")
+print("Choose Genre Below.")
+print("1. Anime")
+print("2. Action")
+print("3. Horror")
+
+G = input("Choose Genre-->")
+
+if G == "1":
+    print("You Choose \n Anime.")
+    print("Choose Duration")
+    print("1. Short")
+    print("2. Medium")
+    print("3. Long")
+
+    Duration = input("Choose Duration")
+    if Duration == "1":
+        print("You Choose Short Duration.")
+        print("Choose Year")
+        print("1. 1990s")
+        print("2. 2000s")
+        Decades = input("Choose Year.")
+        if Decades == "1":
+            print("There Nothing Here")
+        elif Decades == "2":
+            print("There Nothing Here")
+        else:
+            print("Choose Year 1900s or 2000s only.")
+    
+    
+    elif Duration == "2":
+        print("You Choose Medium Duration.")
+        print("Choose Year")
+        print("1. 1990s")
+        print("2. 2000s")
+
+        Decades = input("Choose Year.")
+        if Decades == "1":
+            print("There Nothing Here")
+        elif Decades == "2":
+            print("There Nothing Here")
+        else:
+            print("Choose Year 1900s or 2000s only.")   
+
+    
+    elif Duration == "3":
+        print("You Choose Long Duration.")
+        print("Choose Year")
+        print("1. 1990s")
+        print("2. 2000s")
+        Decades = input("Choose Year.")
+        if Decades == "1":
+            print("There Nothing Here")
+        elif Decades == "2":
+            print("There Nothing Here")
+        else:
+            print("Choose Year 1900s or 2000s only.")
+    else:
+        print("Just Choose 1, 2, and 3.")
+
+
+elif G == "2":
+    print("You Choose \n Action.")
+    print("Choose Duration")
+    print("1. Short")
+    print("2. Medium")
+    print("3. Long")
+
+    Duration = input("Choose Duration")
+    if Duration == "1":
+        print("You Choose Short Duration.")
+        print("Choose Year")
+        print("1. 1990s")
+        print("2. 2000s")
+        Decades = input("Choose Year.")
+        if Decades == "1":
+            print("There Nothing Here")
+        elif Decades == "2":
+            print("There Nothing Here")
+        else:
+            print("Choose Year 1900s or 2000s only.")
+    
+    
+    elif Duration == "2":
+        print("You Choose Medium Duration.")
+        print("Choose Year")
+        print("1. 1990s")
+        print("2. 2000s")
+
+        Decades = input("Choose Year.")
+        if Decades == "1":
+            print("There Nothing Here")
+        elif Decades == "2":
+            print("There Nothing Here")
+        else:
+            print("Choose Year 1900s or 2000s only.")   
+
+    
+    elif Duration == "3":
+        print("You Choose Long Duration.")
+        print("Choose Year")
+        print("1. 1990s")
+        print("2. 2000s")
+        Decades = input("Choose Year.")
+        if Decades == "1":
+            print("There Nothing Here")
+        elif Decades == "2":
+            print("There Nothing Here")
+        else:
+            print("Choose Year 1900s or 2000s only.")
+    else:
+        print("Just Choose 1, 2, and 3.")
+
+elif G == "3":
+    print("You Choose \n Romance.")
+    print("Choose Duration")
+    print("1. Short")
+    print("2. Medium")
+    print("3. Long")
+
+    Duration = input("Choose Duration")
+    if Duration == "1":
+        print("You Choose Short Duration.")
+        print("Choose Year")
+        print("1. 1990s")
+        print("2. 2000s")
+        Decades = input("Choose Year.")
+        if Decades == "1":
+            print("There Nothing Here")
+        elif Decades == "2":
+            print("There Nothing Here")
+        else:
+            print("Choose Year 1900s or 2000s only.")
+    
+    
+    elif Duration == "2":
+        print("You Choose Medium Duration.")
+        print("Choose Year")
+        print("1. 1990s")
+        print("2. 2000s")
+
+        Decades = input("Choose Year.")
+        if Decades == "1":
+            print("There Nothing Here")
+        elif Decades == "2":
+            print("There Nothing Here")
+        else:
+            print("Choose Year 1900s or 2000s only.")   
+
+    
+    elif Duration == "3":
+        print("You Choose Long Duration.")
+        print("Choose Year")
+        print("1. 1990s")
+        print("2. 2000s")
+        Decades = input("Choose Year.")
+        if Decades == "1":
+            print("There Nothing Here")
+        elif Decades == "2":
+            print("There Nothing Here")
+        else:
+            print("Choose Year 1900s or 2000s only.")
+    else:
+        print("Just Choose 1, 2, and 3.")
+
+
+
+else:
+    print("Just Choose 1, 2, and 3.")
+
+
+
+
+
+
+
+
+
+

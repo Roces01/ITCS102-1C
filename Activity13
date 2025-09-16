@@ -1,0 +1,12 @@
+#Add = 0
+#for VA in range(1,11,1):
+ #   print(VA)
+  #  number = eval(input("Input a number-->"))
+ #   Add += number
+ #   print("\n\n\tThe sum of 10 numbers is", Add)
+
+Add = 0
+for VA in range(20,0,-1):
+    number = eval(input("Input a number-->"))
+    Add += number
+    print("\n\n\tThe sum of 10 numbers is", Add)

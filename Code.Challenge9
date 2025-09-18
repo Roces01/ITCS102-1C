@@ -1,0 +1,8 @@
+print("Countdown Number-->")
+number=int(input("Enter a number-->"))
+
+
+for number in range (number,0,-1): 
+
+   print(number)  
+print("Lift off \nHappy New Year")

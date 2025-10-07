@@ -1,17 +1,23 @@
-n = 10
+print("\t\t *")  
 
-for v in range(1, n + 1):              
-    for a in range(n, v, -1):       
+for a in range(1, 11, 1):  
+    for b in range(10, a, -1):
         print(" ", end=" ")
+    for c in range(1, a, 1):
+        print("*", end=" ")
+    for d in range(1, a, 1):
+        print("*", end=" ")
+    print()
 
-    for b in range(v, 1, -1):          
-        print(b, end=" ")
+for a in range(1, 11, 1):  
+    for b in range(1, a, 1):
+        print(" ", end=" ")
+    for c in range(10, a, -1):
+        print("*", end=" ")
+    for d in range(10, a, -1):
+        print("*", end=" ")
+    print()
 
-    print(1, end=" ")                   
-
-    for c in range(2, v + 1):         
-        print(c, end=" ")
-
-    print() 
+print("\t\t *") 
 
 

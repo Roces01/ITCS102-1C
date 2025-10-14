@@ -1,0 +1,13 @@
+loan = eval(input("Enter Your Loan-->"))
+loan_Period = eval(input("Just Enter Something-->"))
+loan_Period *= 12
+balance = loan
+Principal = loan / loan_Period
+print("Please Payment!!")
+print("Month\t|\t\tMonthly\t\t|\tInterest\t|\tPrincipal\t|\tBalance\t\t|")
+print("________________________________________________________________________________________________________________")
+for i in range (1,loan_Period+1, 1):
+    balance -= Principal
+    Interest = balance * 0.003
+    Monthly = Principal + Interest
+    print(f"{i}\t|\t{round(Monthly,2)}\t\t\t|\t{round(Interest,2)}\t\t|\t{round(Principal,2)}\t\t|\t{round(balance,2)}\t\t|")

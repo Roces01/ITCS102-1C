@@ -1,0 +1,23 @@
+Name = input("Enter your name-->")
+print("___________________")
+print("ODD NUMBER SELECTOR, PRESS O TO STOP THE LOOP")
+print("\n__________________")
+j= True
+ev=0
+odd=""
+while j == True:
+    p = eval(input("input a random number -->"))
+    if p %2 == 1:
+        print("odd number detected")
+        ev +=p
+        odd += str(p)
+    elif p == 0:
+        print("loop terminated")
+        break
+    else:
+        if p%2 == 0:
+            print("even number detected ....")
+        else:
+            print("invalid number/input")
+        continue
+print(f"hi{Name},the sum of all odd nunmbers is{ev}")

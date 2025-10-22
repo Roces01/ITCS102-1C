@@ -1,0 +1,13 @@
+Anime_List = []  
+while True:
+    Anime = input("Enter an anime (or type 'exit' to terminate): ")
+    if Anime.lower() == 'exit':
+        print("Program terminated.")
+        break
+    Anime_List.append(Anime)
+    print(f"'{Anime}' has added.")
+
+print("Your list:")
+for Animee in Anime_List:
+    print(f"- {Animee}")
+    

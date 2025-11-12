@@ -1,0 +1,19 @@
+def Name(Name1):
+    print(f"Hola{Name1} How are you?")
+
+def NName(NAME, LOC, AGE):
+    print(f"Hola My name is {NAME}, I lived in {LOC},  My Age is {AGE} years old")
+
+def FuncNum(Number):
+    print(f"I want to get the summation from 1 to {Number}")
+    sum = 0
+    for x in range(1, Number + 1, 1):
+        sum += x
+    return sum
+
+def FuncRev(Number):
+    print(f"I want to get the Factorial of {Number}")
+    sum = 1
+    for x in range(Number, 1, -1):
+        sum *= x
+    return sum

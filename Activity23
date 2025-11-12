@@ -1,0 +1,13 @@
+from Activty23_1 import Name, NName, FuncNum, FuncRev
+
+def MyFunc():
+    print("I")
+    print("Love")
+    print("You")
+
+MyFunc()
+Name('John Paul')
+NName('JP', 'Lucena', '18')
+
+print(f"The summation from 1 to {FuncNum(10)}")
+print(f"The Factorial is {FuncRev(5)}")

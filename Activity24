@@ -1,0 +1,30 @@
+from Activty23_1 import *
+
+print("Welcome to my world")
+a = input("Hi Visitor, and what is your name-->")
+
+print(f"Hi {a} select from the options below")
+print("A - Great Name\nB - Greet with Name, Age, Location\nC - Blank")
+
+Slay= True
+
+while Slay == True:
+    Slay1 = input("Select from A-E -->").lower()
+    
+    if Slay1 == 'A':
+        Na = input("State ur name-->")
+        Name(Na)
+        continue
+    elif Slay1 == 'b':
+            Num = eval(input("Enter any number-->"))
+            print(f"Factorial of {Num} is {FuncRev(Num)}")
+            continue
+    elif Slay1 == 'c':
+         Tri()
+         continue
+    elif Slay1 == 'd':
+         print("Program Stopped")
+         break
+    else:
+         print("Invalid Choice")
+         continue

@@ -1,0 +1,9 @@
+TheList = ['RB', 'NM', 'DREAM', 'SOLAR', 'CIRCLES', 'BB', 'DONE']
+
+print(TheList[5])
+
+
+TheD = {'SOLAR' : 'SOL', 'DEFEATED' : 'CIRLCES', 'RGB' : 'RB', 'DR' : 'DREAM', 'NM' : 'NIGHTMARE'}
+
+print(TheD['SOLAR'])
+

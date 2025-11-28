@@ -1,0 +1,94 @@
+def MyList():
+    while True:
+        Anime_List = [] 
+        Anime = input("Enter an anime (or type 'exit' to terminate): ")
+        if Anime.lower() == 'exit':
+            print("Program terminated.")
+            break
+        Anime_List.append(Anime)
+        print(f"'{Anime}' has added.")
+
+    print("Your list:")
+    for Animee in Anime_List:
+        print(f"- {Animee}")
+
+
+
+def Wlop():
+    
+
+    while True:
+        a = input("Want to continue(Yes or No)-->").lower()
+    
+        if a == "yes":
+            print("This will continue!!!")
+            continue   
+        else:
+            print("Stop")
+            break
+
+
+def IFS():
+
+P = eval(input("Input Your Payment-->"))
+IP = eval(input("Item Price-->"))
+QTY = eval(input("Quantity-->"))
+
+C = IP * QTY
+
+if C >= 100:
+	D = C * .10
+	DP = C - D
+	CH = P - DP
+	print("Cost-->", C)
+	print("Discount-->", D)
+	print("Discounted Price-->", DP)
+	print("Change-->", CH)
+else:
+	CH = P - C
+	print("Cost-->", C)
+	print("Change-->", CH)     
+
+
+import os
+os.system('cls')
+print('____________________________________')
+print("My Work Compilation")
+while True:
+    print("A. Print Statement")
+    print("B. Listing")
+    print("C. While Loop")
+    print("D. IF \\ Else")
+    print("E. Exit")
+    print('____________________________________')
+    Input1 = input("Input your choice-->").upper().strip()
+    if Input1 == 'A':
+        Name = input("Enter Your Name-->")
+        Age = input("Enter Your Age-->")
+        Loc = input("Enter Your Location-->")
+        print(f"Welcome {Name}, Good Day!!\n Your currently {Age}, Lived at {Loc}")
+        print('____________________________________')
+        continue
+    elif Input1 == 'B':
+        
+        MyList()
+        
+
+
+        
+        continue
+    elif Input1 == 'C':
+        Wlop()
+        
+        
+        continue
+    elif Input1 == 'D':
+        IFS()
+        
+        
+        continue
+    elif Input1 == 'E':
+        print("Program Terminated")
+        break
+    else:
+        print("Invalid Choice. Please Re-Enter")

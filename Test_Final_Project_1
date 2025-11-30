@@ -1,94 +1,117 @@
+# This function lets the user create a list of anime titles.
+# The list keeps storing items until the user types 'exit'.
 def MyList():
+    Anime_List = []   # List created once so entries are saved during the loop
+
     while True:
-        Anime_List = [] 
         Anime = input("Enter an anime (or type 'exit' to terminate): ")
+
+        # If user types exit, stop asking for more anime
         if Anime.lower() == 'exit':
             print("Program terminated.")
             break
-        Anime_List.append(Anime)
-        print(f"'{Anime}' has added.")
 
-    print("Your list:")
+        # Add the anime to the list
+        Anime_List.append(Anime)
+        print(f"'{Anime}' has been added.")
+
+    # After the loop ends, show the entire anime list
+    print("\nYour list:")
     for Animee in Anime_List:
         print(f"- {Animee}")
 
 
-
+# This function uses a while loop that continues as long as user types "yes"
 def Wlop():
-    
-
     while True:
-        a = input("Want to continue(Yes or No)-->").lower()
-    
+        a = input("Want to continue (Yes or No) --> ").lower()
+
+        # If user types yes, it continues the loop
         if a == "yes":
             print("This will continue!!!")
-            continue   
-        else:
+
+        # If user types no, it stops the loop
+        elif a == "no":
             print("Stop")
             break
 
+        # Invalid input handling
+        else:
+            print("Invalid input. Type Yes or No.")
 
+
+# This function calculates cost, discount, and change
 def IFS():
+    # Asking user for payment, item price, and quantity
+    P = float(input("Input Your Payment --> "))
+    IP = float(input("Item Price --> "))
+    QTY = float(input("Quantity --> "))
 
-P = eval(input("Input Your Payment-->"))
-IP = eval(input("Item Price-->"))
-QTY = eval(input("Quantity-->"))
+    C = IP * QTY   # Total cost
 
-C = IP * QTY
+    # Apply discount only if cost reaches 100 or more
+    if C >= 100:
+        D = C * 0.10     # 10% discount
+        DP = C - D       # Discounted price
+        CH = P - DP      # Change
+        print("Cost -->", C)
+        print("Discount -->", D)
+        print("Discounted Price -->", DP)
+        print("Change -->", CH)
 
-if C >= 100:
-	D = C * .10
-	DP = C - D
-	CH = P - DP
-	print("Cost-->", C)
-	print("Discount-->", D)
-	print("Discounted Price-->", DP)
-	print("Change-->", CH)
-else:
-	CH = P - C
-	print("Cost-->", C)
-	print("Change-->", CH)     
+    # If no discount
+    else:
+        CH = P - C       # Change
+        print("Cost -->", C)
+        print("Change -->", CH)
 
 
+# Clears the screen (works on Windows)
 import os
 os.system('cls')
+
+# Title banner
 print('____________________________________')
 print("My Work Compilation")
+
+# Main program loop
 while True:
+    # Menu Options
     print("A. Print Statement")
     print("B. Listing")
     print("C. While Loop")
-    print("D. IF \\ Else")
+    print("D. IF / Else")
     print("E. Exit")
     print('____________________________________')
-    Input1 = input("Input your choice-->").upper().strip()
+
+    # User choice
+    Input1 = input("Input your choice --> ").upper().strip()
+
+    # Option A: Simple print information
     if Input1 == 'A':
-        Name = input("Enter Your Name-->")
-        Age = input("Enter Your Age-->")
-        Loc = input("Enter Your Location-->")
-        print(f"Welcome {Name}, Good Day!!\n Your currently {Age}, Lived at {Loc}")
+        Name = input("Enter Your Name --> ")
+        Age = input("Enter Your Age --> ")
+        Loc = input("Enter Your Location --> ")
+        print(f"\nWelcome {Name}, Good Day!!\nYou are currently {Age}, living at {Loc}.")
         print('____________________________________')
-        continue
+
+    # Option B: Call MyList() function
     elif Input1 == 'B':
-        
         MyList()
-        
 
-
-        
-        continue
+    # Option C: Call Wlop() function
     elif Input1 == 'C':
         Wlop()
-        
-        
-        continue
+
+    # Option D: Call IFS() function
     elif Input1 == 'D':
         IFS()
-        
-        
-        continue
+
+    # Option E: Exit program
     elif Input1 == 'E':
         print("Program Terminated")
         break
+
+    # If user enters any other letter
     else:
         print("Invalid Choice. Please Re-Enter")

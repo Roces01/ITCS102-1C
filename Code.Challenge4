@@ -1,179 +1,295 @@
-print("Welcome!!")
-print("Choose Genre Below.")
-print("1. Anime")
-print("2. Action")
-print("3. Horror")
+# This function lets the user create a list of anime titles.
+# The list keeps storing items until the user types 'exit'.
+def MyList():
+    Anime_List = []   # List created once so entries are saved during the loop
 
-G = input("Choose Genre-->")
+    while True:
+        Anime = input("Enter an anime (or type 'exit' to terminate): ")
 
-if G == "1":
-    print("You Choose \n Anime.")
-    print("Choose Duration")
-    print("1. Short")
-    print("2. Medium")
-    print("3. Long")
+        # If user types exit, stop asking for more anime
+        if Anime.lower() == 'exit':
+            print("Program terminated.")
+            break
 
-    Duration = input("Choose Duration")
-    if Duration == "1":
-        print("You Choose Short Duration.")
-        print("Choose Year")
-        print("1. 1990s")
-        print("2. 2000s")
-        Decades = input("Choose Year.")
-        if Decades == "1":
-            print("There Nothing Here")
-        elif Decades == "2":
-            print("There Nothing Here")
-        else:
-            print("Choose Year 1900s or 2000s only.")
+        # Add the anime to the list
+        Anime_List.append(Anime)
+        print(f"'{Anime}' has been added.")
+
+    # After the loop ends, show the entire anime list
+    print("\nYour list:")
+    for Animee in Anime_List:
+        print(f"- {Animee}")
+
+
+def IFEL():
+    print("Welcome!!")
+    print("Choose Genre Below.")
+    print("1. Anime")
+    print("2. Action")
+    print("3. Horror")
+
+    G = input("Choose Genre-->")
+
+    if G == "1":
+        print("You Choose \n Anime.")
+        print("Choose Duration")
+        print("1. Short")
+        print("2. Medium")
+        print("3. Long")
+
+        Duration = input("Choose Duration")
+        if Duration == "1":
+            print("You Choose Short Duration.")
+            print("Choose Year")
+            print("1. 1990s")
+            print("2. 2000s")
+            Decades = input("Choose Year.")
+            if Decades == "1":
+                print("There Nothing In 1990s")
+            elif Decades == "2":
+                print("There Nothing In 2000s")
+            else:
+                print("Choose Year 1900s or 2000s only.")
     
     
-    elif Duration == "2":
-        print("You Choose Medium Duration.")
-        print("Choose Year")
-        print("1. 1990s")
-        print("2. 2000s")
+        elif Duration == "2":
+            print("You Choose Medium Duration.")
+            print("Choose Year")
+            print("1. 1990s")
+            print("2. 2000s")
 
-        Decades = input("Choose Year.")
-        if Decades == "1":
-            print("There Nothing Here")
-        elif Decades == "2":
-            print("There Nothing Here")
-        else:
-            print("Choose Year 1900s or 2000s only.")   
+            Decades = input("Choose Year.")
+            if Decades == "1":
+                print("There Nothing In 1990s")
+            elif Decades == "2":
+                print("There Nothing In 2000s")
+            else:
+                print("Choose Year 1900s or 2000s only.")   
 
     
-    elif Duration == "3":
-        print("You Choose Long Duration.")
-        print("Choose Year")
-        print("1. 1990s")
-        print("2. 2000s")
-        Decades = input("Choose Year.")
-        if Decades == "1":
-            print("There Nothing Here")
-        elif Decades == "2":
-            print("There Nothing Here")
+        elif Duration == "3":
+            print("You Choose Long Duration.")
+            print("Choose Year")
+            print("1. 1990s")
+            print("2. 2000s")
+            Decades = input("Choose Year.")
+            if Decades == "1":
+                print("There Nothing In 1990s")
+            elif Decades == "2":
+                print("There Nothing In 2000s")
+            else:
+                print("Choose Year 1900s or 2000s only.")
         else:
-            print("Choose Year 1900s or 2000s only.")
+            print("Just Choose 1, 2, and 3.")
+
+
+    elif G == "2":
+        print("You Choose \n Action.")
+        print("Choose Duration")
+        print("1. Short")
+        print("2. Medium")
+        print("3. Long")
+
+        Duration = input("Choose Duration")
+        if Duration == "1":
+            print("You Choose Short Duration.")
+            print("Choose Year")
+            print("1. 1990s")
+            print("2. 2000s")
+            Decades = input("Choose Year.")
+            if Decades == "1":
+                print("There Nothing In 1990s")
+            elif Decades == "2":
+                print("There Nothing In 2000s")
+            else:
+                print("Choose Year 1900s or 2000s only.")
+    
+    
+        elif Duration == "2":
+            print("You Choose Medium Duration.")
+            print("Choose Year")
+            print("1. 1990s")
+            print("2. 2000s")
+
+            Decades = input("Choose Year.")
+            if Decades == "1":
+                print("There Nothing In 1990s")
+            elif Decades == "2":
+                print("There Nothing In 2000s")
+            else:
+                print("Choose Year 1900s or 2000s only.")   
+
+    
+        elif Duration == "3":
+            print("You Choose Long Duration.")
+            print("Choose Year")
+            print("1. 1990s")
+            print("2. 2000s")
+            Decades = input("Choose Year.")
+            if Decades == "1":
+                print("There Nothing In 1990s")
+            elif Decades == "2":
+                print("There Nothing In 2000s")
+            else:
+                print("Choose Year 1900s or 2000s only.")
+        else:
+            print("Just Choose 1, 2, and 3.")
+
+    elif G == "3":
+        print("You Choose \n Romance.")
+        print("Choose Duration")
+        print("1. Short")
+        print("2. Medium")
+        print("3. Long")
+
+        Duration = input("Choose Duration")
+        if Duration == "1":
+            print("You Choose Short Duration.")
+            print("Choose Year")
+            print("1. 1990s")
+            print("2. 2000s")
+            Decades = input("Choose Year.")
+            if Decades == "1":
+                print("There Nothing In 1990s")
+            elif Decades == "2":
+                print("There Nothing In 2000s")
+            else:
+                print("Choose Year 1900s or 2000s only.")
+    
+    
+        elif Duration == "2":
+            print("You Choose Medium Duration.")
+            print("Choose Year")
+            print("1. 1990s")
+            print("2. 2000s")
+
+            Decades = input("Choose Year.")
+            if Decades == "1":
+                print("There Nothing In 1990s")
+            elif Decades == "2":
+                print("There Nothing In 2000s")
+            else:
+                print("Choose Year 1900s or 2000s only.")   
+
+    
+        elif Duration == "3":
+            print("You Choose Long Duration.")
+            print("Choose Year")
+            print("1. 1990s")
+            print("2. 2000s")
+            Decades = input("Choose Year.")
+            if Decades == "1":
+                print("There Nothing In 1990s" \
+            "")
+            elif Decades == "2":
+                print("There Nothing In 2000s")
+            else:
+                print("Choose Year 1900s or 2000s only.")
+        else:
+            print("Just Choose 1, 2, and 3.")
+
+
+
     else:
         print("Just Choose 1, 2, and 3.")
 
 
-elif G == "2":
-    print("You Choose \n Action.")
-    print("Choose Duration")
-    print("1. Short")
-    print("2. Medium")
-    print("3. Long")
+# This function uses a while loop that continues as long as user types "yes"
+def Wlop():
+    while True:
+        a = input("Want to continue (Yes or No) --> ").lower()
 
-    Duration = input("Choose Duration")
-    if Duration == "1":
-        print("You Choose Short Duration.")
-        print("Choose Year")
-        print("1. 1990s")
-        print("2. 2000s")
-        Decades = input("Choose Year.")
-        if Decades == "1":
-            print("There Nothing Here")
-        elif Decades == "2":
-            print("There Nothing Here")
-        else:
-            print("Choose Year 1900s or 2000s only.")
-    
-    
-    elif Duration == "2":
-        print("You Choose Medium Duration.")
-        print("Choose Year")
-        print("1. 1990s")
-        print("2. 2000s")
+        # If user types yes, it continues the loop
+        if a == "yes":
+            print("This will continue!!!")
 
-        Decades = input("Choose Year.")
-        if Decades == "1":
-            print("There Nothing Here")
-        elif Decades == "2":
-            print("There Nothing Here")
-        else:
-            print("Choose Year 1900s or 2000s only.")   
+        # If user types no, it stops the loop
+        elif a == "no":
+            print("Stop")
+            break
 
-    
-    elif Duration == "3":
-        print("You Choose Long Duration.")
-        print("Choose Year")
-        print("1. 1990s")
-        print("2. 2000s")
-        Decades = input("Choose Year.")
-        if Decades == "1":
-            print("There Nothing Here")
-        elif Decades == "2":
-            print("There Nothing Here")
+        # Invalid input handling
         else:
-            print("Choose Year 1900s or 2000s only.")
+            print("Invalid input. Type Yes or No.")
+
+
+# This function calculates cost, discount, and change
+def IFS():
+    # Asking user for payment, item price, and quantity
+    P = float(input("Input Your Payment --> "))
+    IP = float(input("Item Price --> "))
+    QTY = float(input("Quantity --> "))
+
+    C = IP * QTY   # Total cost
+
+    # Apply discount only if cost reaches 100 or more
+    if C >= 100:
+        D = C * 0.10     # 10% discount
+        DP = C - D       # Discounted price
+        CH = P - DP      # Change
+        print("Cost -->", C)
+        print("Discount -->", D)
+        print("Discounted Price -->", DP)
+        print("Change -->", CH)
+
+    # If no discount
     else:
-        print("Just Choose 1, 2, and 3.")
+        CH = P - C       # Change
+        print("Cost -->", C)
+        print("Change -->", CH)
 
-elif G == "3":
-    print("You Choose \n Romance.")
-    print("Choose Duration")
-    print("1. Short")
-    print("2. Medium")
-    print("3. Long")
 
-    Duration = input("Choose Duration")
-    if Duration == "1":
-        print("You Choose Short Duration.")
-        print("Choose Year")
-        print("1. 1990s")
-        print("2. 2000s")
-        Decades = input("Choose Year.")
-        if Decades == "1":
-            print("There Nothing Here")
-        elif Decades == "2":
-            print("There Nothing Here")
-        else:
-            print("Choose Year 1900s or 2000s only.")
-    
-    
-    elif Duration == "2":
-        print("You Choose Medium Duration.")
-        print("Choose Year")
-        print("1. 1990s")
-        print("2. 2000s")
+# Clears the screen
+import os
+os.system('cls')
 
-        Decades = input("Choose Year.")
-        if Decades == "1":
-            print("There Nothing Here")
-        elif Decades == "2":
-            print("There Nothing Here")
-        else:
-            print("Choose Year 1900s or 2000s only.")   
+# Title banner
 
-    
-    elif Duration == "3":
-        print("You Choose Long Duration.")
-        print("Choose Year")
-        print("1. 1990s")
-        print("2. 2000s")
-        Decades = input("Choose Year.")
-        if Decades == "1":
-            print("There Nothing Here")
-        elif Decades == "2":
-            print("There Nothing Here")
-        else:
-            print("Choose Year 1900s or 2000s only.")
+print('____________________________________')
+print("My Work Compilation")
+
+# Main program loop
+while True:
+    # Menu Options
+    print("A. Print Statement")
+    print("B. Listing")
+    print("C. While Loop")
+    print("D. IF / Else")
+    print("E. Elif")
+    print("F. Exit")
+    print('____________________________________')
+
+    # User choice
+    Input1 = input("Input your choice --> ").upper().strip()
+
+    # Option A: Simple print information
+    if Input1 == 'A':
+        Name = input("Enter Your Name --> ")
+        Age = input("Enter Your Age --> ")
+        Loc = input("Enter Your Location --> ")
+        print(f"\nWelcome {Name}, Good Day!!\nYou are currently {Age}, living at {Loc}.")
+        print('____________________________________')
+
+    # Option B: Call MyList() function
+    elif Input1 == 'B':
+        MyList()
+
+    # Option C: Call Wlop() function
+    elif Input1 == 'C':
+        Wlop()
+
+    # Option D: Call IFS() function
+    elif Input1 == 'D':
+        IFS()
+
+    elif Input1 == 'E':
+        IFEL()
+
+    # Option E: Exit program
+    elif Input1 == 'F':
+        print("Program Terminated")
+        break
+
+    # If user enters any other letter
     else:
-        print("Just Choose 1, 2, and 3.")
-
-
-
-else:
-    print("Just Choose 1, 2, and 3.")
-
-
-
-
-
-
-
-
-
-
+        print("Invalid Choice. Please Re-Enter")

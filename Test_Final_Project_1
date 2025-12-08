@@ -1,24 +1,40 @@
-# This function lets the user create a list of anime titles.
-# The list keeps storing items until the user types 'exit'.
-def MyList():
-    Anime_List = []   # List created once so entries are saved during the loop
+# SIMPLE LOGIN SYSTEM
+
+
+def login():
+    USERNAME = "rocesjp"
+    PASSWORD = "pogi123"
+
+    print("LOGIN REQUIRED")
 
     while True:
-        Anime = input("Enter an anime (or type 'exit' to terminate): ")
+        user = input("Enter Username: ")
+        pw = input("Enter Password: ")
 
-        # If user types exit, stop asking for more anime
+        if user == USERNAME and pw == PASSWORD:
+            print("\nAba Tama!\n")
+            break
+        else:
+            print("Mali Naman. Ulitin mo ngani.\n")
+
+
+
+# Your original functions below
+
+
+def MyList():
+    Anime_List = []
+    while True:
+        Anime = input("Enter An Anime (or Exit Lang Kung Di Mo Na Kaya): ")
         if Anime.lower() == 'exit':
             print("Program terminated.")
             break
-
-        # Add the anime to the list
         Anime_List.append(Anime)
         print(f"'{Anime}' has been added.")
-
-    # After the loop ends, show the entire anime list
     print("\nYour list:")
     for Animee in Anime_List:
         print(f"- {Animee}")
+
 
 def IFEL():
     print("Welcome!!")
@@ -27,8 +43,7 @@ def IFEL():
     print("2. Action")
     print("3. Horror")
 
-    # Ask the user for the genre choice
-    G = input("Choose Genre-->").strip()
+    G = input("Choose Genre--> ").strip()
 
     if G == "1":
         print("You Choose Anime.")
@@ -38,15 +53,15 @@ def IFEL():
         print("You Choose Horror.")
     else:
         print("Invalid choice! Please select 1, 2, or 3.")
-        return  # Exit the function if the genre is invalid
+        input("Press Enter to return to menu...")
+        return
 
-    # Ask the user to choose the duration (short, medium, long)
     print("Choose Duration")
     print("1. Short")
     print("2. Medium")
     print("3. Long")
 
-    Duration = input("Choose Duration-->").strip()
+    Duration = input("Choose Duration--> ").strip()
 
     if Duration == "1":
         print("You Choose Short Duration.")
@@ -56,126 +71,103 @@ def IFEL():
         print("You Choose Long Duration.")
     else:
         print("Invalid duration! Please select 1, 2, or 3.")
-        return  # Exit the function if the duration is invalid
+        input("Press Enter to return to menu...")
+        return
 
-    # Ask the user to choose the decade (1990s or 2000s)
     print("Choose Year")
     print("1. 1990s")
     print("2. 2000s")
 
-    Decades = input("Choose Year-->").strip()
+    Decades = input("Choose Year--> ").strip()
 
     if Decades == "1":
-        print(f"There is nothing from {G} in the 1990s.")
+        print("There is nothing from this genre in the 1990s.")
     elif Decades == "2":
-        print(f"There is nothing from {G} in the 2000s.")
+        print("There is nothing from this genre in the 2000s.")
     else:
-        print("Invalid year! Please select 1 (1990s) or 2 (2000s).")
+        print("Invalid year! Please select 1 or 2.")
+        input("Press Enter to return to menu...")
+        return
+
+    input("Done! Press Enter to return to menu...")
 
 
-
-    
-        
-    
-        
-
-
-# This function uses a while loop that continues as long as user types "yes"
 def Wlop():
     while True:
-        a = input("Want to continue (Yes or No) --> ").lower()
-
-        # If user types yes, it continues the loop
+        a = input("Continue. Kaya Pa Ba Ya (Yes or No) --> ").lower()
         if a == "yes":
-            print("This will continue!!!")
-
-        # If user types no, it stops the loop
+            print("Tuloy Natin To. Miss You")
         elif a == "no":
-            print("Stop")
+            print("Tigil Na Natin To. Di Ko Na Kaya")
             break
-
-        # Invalid input handling
         else:
-            print("Invalid input. Type Yes or No.")
+            print("Yes Or No Na Nga Lang Di Pa Masulat.")
 
 
-# This function calculates cost, discount, and change
 def IFS():
-    # Asking user for payment, item price, and quantity
     P = float(input("Input Your Payment --> "))
-    IP = float(input("Item Price --> "))
-    QTY = float(input("Quantity --> "))
+    IP = float(input("Presyo ngani --> "))
+    QTY = float(input("Ilan Gusto Mo Ya --> "))
 
-    C = IP * QTY   # Total cost
+    C = IP * QTY
 
-    # Apply discount only if cost reaches 100 or more
     if C >= 100:
-        D = C * 0.10     # 10% discount
-        DP = C - D       # Discounted price
-        CH = P - DP      # Change
+        D = C * 0.10
+        DP = C - D
+        CH = P - DP
         print("Cost -->", C)
         print("Discount -->", D)
         print("Discounted Price -->", DP)
         print("Change -->", CH)
-
-    # If no discount
     else:
-        CH = P - C       # Change
-        print("Cost -->", C)
-        print("Change -->", CH)
+        CH = P - C
+        print("Babayaran Mo Ya -->", C)
+        print("Sukli Mo Ya -->", CH)
 
+# MAIN PROGRAM STARTS HERE
 
-# Clears the screen
 import os
 os.system('cls')
 
-# Title banner
+# Call the LOGIN before showing menu
+login()
 
 print('____________________________________')
 print("My Work Compilation")
 
-# Main program loop
 while True:
-    # Menu Options
     print("A. Print Statement")
-    print("B. Listing")
+    print("B. List Your Anime")
     print("C. While Loop")
-    print("D. IF / Else")
-    print("E. Elif")
+    print("D. Payment")
+    print("E. Movies")
     print("F. Exit")
     print('____________________________________')
 
-    # User choice
     Input1 = input("Input your choice --> ").upper().strip()
 
-    # Option A: Simple print information
     if Input1 == 'A':
         Name = input("Enter Your Name --> ")
         Age = input("Enter Your Age --> ")
         Loc = input("Enter Your Location --> ")
-        print(f"\nWelcome {Name}, Good Day!!\nYou are currently {Age}, living at {Loc}.")
+        print(f"\nKamusta {Name}, Magandang Araw Kalbo!!\nIkaw Ay {Age} Na Pala , Nakatira Ka Pa Rin {Loc}.")
         print('____________________________________')
 
-    # Option B: Call MyList() function
     elif Input1 == 'B':
         MyList()
 
-    # Option C: Call Wlop() function
     elif Input1 == 'C':
         Wlop()
 
-    # Option D: Call IFS() function
     elif Input1 == 'D':
         IFS()
 
     elif Input1 == 'E':
         IFEL()
 
-    # Option E: Exit program
     elif Input1 == 'F':
         print("Program Terminated")
         break
 
-    # If user enters any other letter
     else:
         print("Invalid Choice. Please Re-Enter")

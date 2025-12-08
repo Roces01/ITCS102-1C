@@ -1,60 +1,101 @@
+
 # SIMPLE LOGIN SYSTEM
 
 
 def login():
+
+    # Set username and password for login
+
     USERNAME = "rocesjp"
     PASSWORD = "pogi123"
 
     print("LOGIN REQUIRED")
 
+    # Loop until the correct username and password are entered
+
     while True:
         user = input("Enter Username: ")
         pw = input("Enter Password: ")
 
+        # Check if both username and password match
+
         if user == USERNAME and pw == PASSWORD:
-            print("\nAba Tama!\n")
+            print("\nAba Tama!\n")  # Login success message
             break
+
         else:
-            print("Mali Naman. Ulitin mo ngani.\n")
+            print("Mali Naman. Ulitin mo ngani.\n")  # Login failed message
 
 
 
-# Your original functions below
+# FUNCTION: MyList (User creates anime list)
 
 
 def MyList():
-    Anime_List = []
+
+    Anime_List = []  # Empty list to store anime titles
+
     while True:
+
         Anime = input("Enter An Anime (or Exit Lang Kung Di Mo Na Kaya): ")
+
+        # If user types exit, stop the loop
+
         if Anime.lower() == 'exit':
             print("Program terminated.")
             break
+
+        # Add entered anime to the list
+
         Anime_List.append(Anime)
         print(f"'{Anime}' has been added.")
+
+    # Display the whole anime list after exiting
+
     print("\nYour list:")
+
     for Animee in Anime_List:
         print(f"- {Animee}")
 
 
+
+
+# FUNCTION: IFEL (Genre, Duration, Year Selection)
+
+
 def IFEL():
+
     print("Welcome!!")
     print("Choose Genre Below.")
     print("1. Anime")
     print("2. Action")
     print("3. Horror")
 
+    # User chooses a genre
+
     G = input("Choose Genre--> ").strip()
 
+    # Validate genre selection
+
     if G == "1":
+
         print("You Choose Anime.")
     elif G == "2":
+
         print("You Choose Action.")
     elif G == "3":
+
         print("You Choose Horror.")
+
     else:
+
+        # If invalid, return to main menu
+
         print("Invalid choice! Please select 1, 2, or 3.")
         input("Press Enter to return to menu...")
         return
+
+    # Next selection: Duration
 
     print("Choose Duration")
     print("1. Short")
@@ -63,16 +104,24 @@ def IFEL():
 
     Duration = input("Choose Duration--> ").strip()
 
+    # Validate duration
+
     if Duration == "1":
         print("You Choose Short Duration.")
+
     elif Duration == "2":
         print("You Choose Medium Duration.")
+
     elif Duration == "3":
         print("You Choose Long Duration.")
+
+
     else:
         print("Invalid duration! Please select 1, 2, or 3.")
         input("Press Enter to return to menu...")
         return
+
+    # Next selection: Decade
 
     print("Choose Year")
     print("1. 1990s")
@@ -80,10 +129,14 @@ def IFEL():
 
     Decades = input("Choose Year--> ").strip()
 
+    # Validate decade
+
     if Decades == "1":
         print("There is nothing from this genre in the 1990s.")
+
     elif Decades == "2":
         print("There is nothing from this genre in the 2000s.")
+
     else:
         print("Invalid year! Please select 1 or 2.")
         input("Press Enter to return to menu...")
@@ -92,50 +145,79 @@ def IFEL():
     input("Done! Press Enter to return to menu...")
 
 
+
+
+# FUNCTION: Wlop (While loop demonstration)
+
 def Wlop():
+
     while True:
+        # Ask user if they want to continue
         a = input("Continue. Kaya Pa Ba Ya (Yes or No) --> ").lower()
+
         if a == "yes":
-            print("Tuloy Natin To. Miss You")
+            print("Tuloy Natin To. Miss You")  # User chooses to continue
+
         elif a == "no":
-            print("Tigil Na Natin To. Di Ko Na Kaya")
+            print("Tigil Na Natin To. Di Ko Na Kaya")  # Ends loop
             break
+
         else:
-            print("Yes Or No Na Nga Lang Di Pa Masulat.")
+            print("Yes Or No Na Nga Lang Di Pa Masulat.")  # Invalid input
+
+
+
+
+# FUNCTION: IFS (Payment Calculator)
 
 
 def IFS():
+    # Ask user for payment info
     P = float(input("Input Your Payment --> "))
     IP = float(input("Presyo ngani --> "))
     QTY = float(input("Ilan Gusto Mo Ya --> "))
 
-    C = IP * QTY
+    C = IP * QTY  # Total cost
+
+    # Apply discount if total is 100 or more
 
     if C >= 100:
-        D = C * 0.10
-        DP = C - D
-        CH = P - DP
+
+        D = C * 0.10  # 10% discount
+        DP = C - D     # Discounted price
+        CH = P - DP    # Change
         print("Cost -->", C)
         print("Discount -->", D)
         print("Discounted Price -->", DP)
         print("Change -->", CH)
+
     else:
+
+        # If no discount
+
         CH = P - C
         print("Babayaran Mo Ya -->", C)
         print("Sukli Mo Ya -->", CH)
 
+
+
+
 # MAIN PROGRAM STARTS HERE
 
-import os
-os.system('cls')
 
-# Call the LOGIN before showing menu
-login()
+import os
+
+os.system('cls')  # Clears the console
+
+login()  # Call login function before showing main menu
 
 print('____________________________________')
 print("My Work Compilation")
 
+# MAIN MENU LOOP
+
 while True:
+
     print("A. Print Statement")
     print("B. List Your Anime")
     print("C. While Loop")
@@ -144,30 +226,49 @@ while True:
     print("F. Exit")
     print('____________________________________')
 
+
     Input1 = input("Input your choice --> ").upper().strip()
 
+    # OPTION A: Basic Print Statement
+
     if Input1 == 'A':
+
         Name = input("Enter Your Name --> ")
+
         Age = input("Enter Your Age --> ")
+
         Loc = input("Enter Your Location --> ")
+
         print(f"\nKamusta {Name}, Magandang Araw Kalbo!!\nIkaw Ay {Age} Na Pala , Nakatira Ka Pa Rin {Loc}.")
         print('____________________________________')
+
+    # OPTION B: Anime List Function
 
     elif Input1 == 'B':
         MyList()
 
+    # OPTION C: While Loop Demo
+
     elif Input1 == 'C':
         Wlop()
+
+    # OPTION D: Payment Calculator
 
     elif Input1 == 'D':
         IFS()
 
+    # OPTION E: Genre/Year Selector
+
     elif Input1 == 'E':
         IFEL()
+
+    # OPTION F: Exit Program
 
     elif Input1 == 'F':
         print("Program Terminated")
         break
+
+    # INVALID MENU CHOICE
 
     else:
         print("Invalid Choice. Please Re-Enter")

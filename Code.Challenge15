@@ -1,129 +1,402 @@
-import os
-import json
-os.system('cls')
-print('DLL STUDENT INFORMATION SYSTEM')
-print('____________________________________')
-Record = {}
-while True:
-    print("A - Add Student")
-    print("B - print Student Info")
-    print("C - Search Student")
-    print("D - Delete Student Record")
-    print("E - Print All Student Info")
-    print("F - Export Data")
-    print("G - Exit")    
-    print('____________________________________')
+# SIMPLE LOGIN SYSTEM
 
-    choice = input("Input your choice-->").lower().strip()
-    if choice == 'a':
-        print("Add a student")
+def login():
 
-        id = input("Input your ID Number-->").lower()
-        Fname = input("Input your First Name-->").lower()
-        Lname = input("Input your last name-->").lower()
-        Course = input("Input your course").lower()
-        sect = input("Input your Section-->").lower()
-        EM = input("Input your email-->").lower()
-        Record[id] = [Fname, Lname, Course, sect, EM ]
+    # Set username and password for login
 
-        print("Record Added")
-        continue
-    elif choice == 'b':
-        os.system('cls')
-        print("printing student record")
-        print('____________________________________')
+    USERNAME = "rocesjp"
 
-        for id, info in Record.items():
-            print(f"Student{id} - Record{info}")
+    PASSWORD = "pogi123"
 
-        continue
-    elif choice == 'c':
-        os.system('cls')
-        print("Search student record")
+    print("LOGIN REQUIRED")
 
-        sid = input("Input student id").lower()
+    # Loop until the correct username and password are entered
 
-        for ec in Record.keys():
-            if sid in Record.keys():
-                print("\n\nRecord Identify")
-                print('____________________________________')
-                for id in Record[sid]:
-                    print(f"--{id}")
-                    print('____________________________________')
-            else:
-                print("No Record Found")
+    while True:
 
-        continue
-    elif choice == 'd':
-        os.system('cls')
-        print("Delete Record")
+        user = input("Enter Username: ")
 
-        sid = input("input student id").lower()
-        for ec in Record.keys():
-            if sid in Record.keys():
-                print(f"RECORD IDENTIFY FOR{sid}")
-                print('____________________________________')
-                for id in Record[sid]:
-                    print(f"--{id}")
-                print('____________________________________')
+        pw = input("Enter Password: ")
 
-                Record.pop(sid)
-                print("Record Deleted")
-            else:
-                print("No Record")
-            break
-        continue
-    elif choice == 'e':
-        os.system('cls')
-        print("Modify Record")
+        # Check if both username and password match
 
-        sid = input("input student id").lower()
-        for ec in Record.keys():
-            if sid in Record.keys():
-                print(f"RECORD IDENTIFY FOR{sid}")
-            print('____________________________________')
-            for id in Record[sid]:
-                print(f"--{id}")
-            print('____________________________________')
-        
-            Fname = input("Input your First Name-->").lower()
-            Lname = input("Input your last name-->").lower()
-            Course = input("Input your course").lower()
-            sect = input("Input your Section-->").lower()
-            EM = input("Input your email-->").lower()  
+        if user == USERNAME and pw == PASSWORD:
 
-            
-            Record[sid][0] = Fname 
-            Record[sid][1] =Lname
-            Record[sid][2]=Course
-            Record[sid][3] =sect
-            Record[sid][4]=EM 
-            print("Data Updated")
+            print("\nAba Tama!\n")  # Login success message
+
+            break  # Exit loop when login is correct
 
         else:
-            print("No Record Found")
-        break
-        continue
-    elif choice == 'f':
-        print("Export data")
+            print("Mali Naman. Ulitin mo ngani.\n")  # Login failed message
 
-        with open('Record.json' ,'w' ) as new_file:
-            json.dump(Record, new_file, indent=4)
-            
-        
 
-        continue
-        print("Data Exported Success")
-    elif choice == 'g':
-        print("System out")
-        break
+
+# FUNCTION: MyList (User creates anime list)
+
+def MyList():
+
+    Anime_List = []  # Empty list to store anime titles
+
+    while True:
+
+        # Ask user for anime title
+
+        Anime = input("Enter An Anime (or Exit Lang Kung Di Mo Na Kaya): ")
+
+        # If user types exit, stop the loop
+
+        if Anime.lower() == 'exit':
+
+            print("Program terminated.")
+
+            break  # Exit the loop
+
+        # Add entered anime to the list
+
+        Anime_List.append(Anime)
+
+        print(f"'{Anime}' has been added.")
+
+    # Display the whole anime list after exiting
+
+    print("\nYour list:")
+
+    for Animee in Anime_List:
+
+        print(f"- {Animee}")
+
+
+
+
+# FUNCTION: IFEL (Genre, Duration, Year Selection)
+
+def IFEL():
+
+    print("Welcome!!")
+
+    print("Choose Genre Below.")
+
+    print("1. Anime")
+
+    print("2. Action")
+
+    print("3. Horror")
+
+    # User chooses a genre
+
+    G = input("Choose Genre--> ").strip()
+
+    # Validate genre selection
+
+    if G == "1":
+        print("You Choose Anime.")
+
+    elif G == "2":
+        print("You Choose Action.")
+
+    elif G == "3":
+        print("You Choose Horror.")
+
     else:
-        print("Invalid Choice, Re_Enter")
-        continue
+
+        # If invalid input
+
+        print("Invalid choice! Please select 1, 2, or 3.")
+
+        input("Press Enter to return to menu...")
+
+        return  # Return to main menu
+
+    # Next selection: Duration
+
+    print("Choose Duration")
+
+    print("1. Short")
+
+    print("2. Medium")
+
+    print("3. Long")
+
+    Duration = input("Choose Duration--> ").strip()
+
+    # Validate duration
+
+    if Duration == "1":
+
+        print("You Choose Short Duration.")
+
+    elif Duration == "2":
+
+        print("You Choose Medium Duration.")
+
+    elif Duration == "3":
+
+        print("You Choose Long Duration.")
+
+    else:
+
+        print("Invalid duration! Please select 1, 2, or 3.")
+
+        input("Press Enter to return to menu...")
+
+        return
+
+    # Next selection: Year
+
+    print("Choose Year")
+
+    print("1. 1990s")
+
+    print("2. 2000s")
+
+    Decades = input("Choose Year--> ").strip()
+
+    # Validate decade
+
+    if Decades == "1":
+
+        print("There is nothing from this genre in the 1990s.")
+
+    elif Decades == "2":
+
+        print("There is nothing from this genre in the 2000s.")
+
+    else:
+
+        print("Invalid year! Please select 1 or 2.")
+
+        input("Press Enter to return to menu...")
+
+        return
+
+    input("Done! Press Enter to return to menu...")
+
+
+
+# FUNCTION: Wlop (While loop demo)
+
+def Wlop():
+
+    while True:
+
+        # Ask user if they want to continue
+
+        a = input("Continue. Kaya Pa Ba Ya (Yes or No) --> ").lower()
+
+        if a == "yes":
+
+            print("Tuloy Natin To. Miss You")  # User chooses to continue
+
+        elif a == "no":
+
+            print("Tigil Na Natin To. Di Ko Na Kaya")  # Ends loop
+
+            break
+
+        else:
+            print("Yes Or No Na Nga Lang Di Pa Masulat.")  # Invalid input
+
+
+
+
+# FUNCTION: IFS (Payment Calculator)
+
+def IFS():
+
+    # Ask user for payment info
+
+    P = float(input("Input Your Payment --> "))
+
+    IP = float(input("Presyo ngani --> "))
+
+    QTY = float(input("Ilan Gusto Mo Ya --> "))
+
+
+    C = IP * QTY  # Total cost
+
+    # Apply discount if total is 100 or more
+
+    if C >= 100:
+
+        D = C * 0.10  # 10% discount
+
+        DP = C - D     # Discounted price
+
+        CH = P - DP    # Change
+
+        print("Cost -->", C)
+
+        print("Discount -->", D)
+
+        print("Discounted Price -->", DP)
+
+        print("Change -->", CH)
+
+    else:
+
+        # If no discount
+
+        CH = P - C
+        print("Babayaran Mo Ya -->", C)
+
+        print("Sukli Mo Ya -->", CH)
+
+
+
+
+# FUNCTION: CH — Detect Data Type
+
+import ast
+
+def CH():
+
+    data = input("Write Anything--> ")
+
+    try:
+
+        # Try to safely evaluate the input (for numbers, list, dict, etc.)
+
+        value = ast.literal_eval(data)
+
+        print("The data type is -->", type(value))
+
+    except Exception:
+
+        # If it cannot be evaluated, treat as string
+
+        print("The data type is -->", type(data))
+
+
+
+# FUNCTION: OPER — Basic math operators
+
+def OPER():
+
+    try:
+
+        # Convert inputs to numbers
+
+        FN = float(input("Enter the first number --> "))
+
+        SC = float(input("Enter the second number --> "))
+
+        a = FN + SC
+        b = FN - SC
+        c = FN * SC
+        d = FN / SC  # May cause error if SC = 0
+
+        print("The answer of the addition is:", a)
+
+        print("The answer of the subtraction is:", b)
+
+        print("The answer of the multiplication is:", c)
+
+        print("The answer of the division is:", d)
+
+    except ValueError:
+
+        # Wrong input type
+
+        print("Error: Please enter a valid number!")
+
+    except ZeroDivisionError:
+
+        print("Error: Cannot divide by zero!")
+
+
+
+# FUNCTION: For — Add 10 numbers
+
+def For():
+
+    Add = 0  # Start sum at zero
+
+    for VA in range(10):   # loop exactly 10 times
+
+        number = float(input("Input a number --> "))
+
+        Add += number  # Add number to total
+
+    # Display result
+
+    print("\n\n\tThe sum of 10 numbers is", Add)
+
+
+
+
+
+# MAIN PROGRAM STARTS HERE
+
+import os
+
+os.system('cls')
+
+login()  # Call login function before showing main menu
+
+print('____________________________________')
+
+print("My Work Compilation")
+
+# MAIN MENU LOOP
+
+while True:
+
+    print("A. Print Statement")
+    print("B. List")
+    print("C. While Loop")
+    print("D. IF\\ELSE")
+    print("E. ELIF")
+    print("F. Variable Identification")
+    print("G. Operator")
+    print("H. For Loop")
+    print("I. Exit")
+    print('____________________________________')
+
+    Input1 = input("Input your choice --> ").upper().strip()
+
+    # OPTION A: Basic Print Statement
+
+    if Input1 == 'A':
+
+        Name = input("Enter Your Name --> ")
+        Age = input("Enter Your Age --> ")
+        Loc = input("Enter Your Location --> ")
+
+        print(f"\nKamusta {Name}, Magandang Araw Kalbo!!\nIkaw Ay {Age} Na Pala , Nakatira Ka Pa Rin {Loc}.")
+        print('____________________________________')
+
+    elif Input1 == 'B':
+
+        MyList()  # Anime list function
+
+    elif Input1 == 'C':
+
+        Wlop()  # While loop function
+
+    elif Input1 == 'D':
+
+        IFS()  # Payment calculator
+
+    elif Input1 == 'E':
+
+        IFEL()  # Genre selector
     
+    elif Input1 == 'F':
+        CH()  # Data type checker
+        
+    elif Input1 == 'G':
 
+        OPER()  # Operators (add, subtract, etc.)
 
+    elif Input1 == 'H':
 
+        For()  # For loop (sum 10 numbers)
 
+    elif Input1 == 'I':
 
+        print("Program Terminated")
 
+        break  # Exit program
+
+    else:
+        print("Invalid Choice. Please Re-Enter")

@@ -230,7 +230,7 @@ def IFS():
 
         print("Discounted Price -->", DP)
 
-        print("Cash-->, P")
+        print("Cash-->", P)
 
         print("Change -->", CH)
 
@@ -240,7 +240,7 @@ def IFS():
 
         CH = P - C
         print("Total Cost -->", C)
-        print("Cash-->, P")
+        print("Cash-->", P)
 
         print("Change -->", CH)
 

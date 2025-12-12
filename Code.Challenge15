@@ -22,12 +22,12 @@ def login():
 
         if user == USERNAME and pw == PASSWORD:
 
-            print("\nAba Tama!\n")  # Login success message
+            print("\nLogin Successfully!\n")  # Login success message
 
             break  # Exit loop when login is correct
 
         else:
-            print("Mali Naman. Ulitin mo ngani.\n")  # Login failed message
+            print("Login Failed. Please Try Again.\n")  # Login failed message
 
 
 
@@ -41,7 +41,7 @@ def MyList():
 
         # Ask user for anime title
 
-        Anime = input("Enter An Anime (or Exit Lang Kung Di Mo Na Kaya): ")
+        Anime = input("Enter An Anime (or Type Exit To Terminate): ")
 
         # If user types exit, stop the loop
 
@@ -181,20 +181,20 @@ def Wlop():
 
         # Ask user if they want to continue
 
-        a = input("Continue. Kaya Pa Ba Ya (Yes or No) --> ").lower()
+        a = input("Continue. Type (Yes or No) --> ").lower()
 
         if a == "yes":
 
-            print("Tuloy Natin To. Miss You")  # User chooses to continue
+            print("The Program Will Continue.")  # User chooses to continue
 
         elif a == "no":
 
-            print("Tigil Na Natin To. Di Ko Na Kaya")  # Ends loop
+            print("The Program Terminated")  # Ends loop
 
             break
 
         else:
-            print("Yes Or No Na Nga Lang Di Pa Masulat.")  # Invalid input
+            print("Invalid Choice. Please Try Again!")  # Invalid input
 
 
 
@@ -207,9 +207,9 @@ def IFS():
 
     P = float(input("Input Your Payment --> "))
 
-    IP = float(input("Presyo ngani --> "))
+    IP = float(input("Price --> "))
 
-    QTY = float(input("Ilan Gusto Mo Ya --> "))
+    QTY = float(input("Quantity --> "))
 
 
     C = IP * QTY  # Total cost
@@ -237,9 +237,9 @@ def IFS():
         # If no discount
 
         CH = P - C
-        print("Babayaran Mo Ya -->", C)
+        print("Total Cost -->", C)
 
-        print("Sukli Mo Ya -->", CH)
+        print("Change -->", CH)
 
 
 
